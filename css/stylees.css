@@ -490,6 +490,7 @@ background: #FFFFFF;
 }
 .footer >.container{
     display: flex;
+    
 
 }
 
@@ -544,7 +545,15 @@ background: #FFFFFF;
   gap: 10px;
   
 }
-.join-title{
+
+.join-action-form{
+    margin-left: 70px;
+
+    
+}
+.join-title,
+.join-action-title
+{
     display: flex;
     
     align-items: center;
@@ -557,9 +566,40 @@ background: #FFFFFF;
  letter-spacing: 0.03em;
  color: #ffffff ;
  margin-top: 0;
- margin-bottom: 0;
+ margin-bottom: 0px;
 }
 
+.join-action input{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    margin-top: 20px;
+    width: 358px;
+
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+    
+    border-radius: 4px;
+    background: transparent;
+}
+
+
+.join-action-btn{
+    background: #2196F3;
+    color: #ffffff;
+    border-radius: 4px;
+    border: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    min-height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 12px;
+   
+}
+.action-icon{
+    fill: #FFFFFF;
+    margin-left: 10px;
+}
 
 .backdrop {
     transition:
@@ -590,6 +630,7 @@ background: #FFFFFF;
     
     width: 528px;
     min-height: 581px;
+    padding: 40px;
 
     background-color: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -604,6 +645,17 @@ background: #FFFFFF;
     position: absolute;
     top: 8px;
     right: 8px;
+    
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    
+}
+.modal-x:hover{
+  
+    fill:var(--accent-color);
 }
 .modal-btn{
     background-color: transparent;
@@ -616,6 +668,208 @@ background: #FFFFFF;
     pointer-events: none;
 
 }
+.form{
+    width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   
+   
+}
+.form.input:focus + .form-label{
+ color: #2196F3;
+}
+
+.form-input:not(:focus):not(:placeholder-shown):invalid{
+background-color: red;
+}
+.form-input:not(:focus):not(:placeholder-shown):valid {
+    background-color: white;
+}
+.form-group{
+   /* outline: 1px solid #2196F3;*/
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+
+.form-group-title{
+       font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: calc(23/20);
+        text-align: center;
+        letter-spacing: 0.03em;
+    
+        color: #212121;
+}
+ .form-label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    
+ }
+.form-group input{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+    border-radius: 4px;
+    outline: 1px solid rgba(33, 33, 33, 0.2); ;
+}
+.input-icon{
+    position: relative;
+}
+.action-icon{
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill:#212121;
+
+
+}
+.form-input{
+    padding: 42px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus{
+    border-color:#2196F3 ;
+}
+.form-input:focus +.action-icon{
+    fill: #2196F3;
+}
+textarea{
+    resize: none;
+
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 15px;
+}
+textarea::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-left: 16px;
+    color: rgba(117, 117, 117, 0.5),
+           rgba(117, 117, 117, 0.5);
+}
+.form-group textarea::placeholder{
+    color: rgba(117, 117, 117, 0.5);
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(16/14);
+        letter-spacing: 0.01em;
+}
+
+.form-check-text{
+    transition-property: backgroind-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.form-check-text{
+font-weight: 400;
+    font-size: 14px;
+}
+.form-check-text span{
+    
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 8px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.check-icon{
+    fill:transparent
+}
+.form-check:checked +.form-check-text span{
+     background-color: var(--accent-color);
+     border: none;
+}
+.form-check:focus +.form-check-text span{
+    border-color: var(--accent-color);
+}
+
+.form-check:checked+.form-check-text .check-icon{
+    fill:#ffffff;
+}
+        
+        
+
+/*.form-check-text::before{
+    content: '';
+    width: 16px;
+    height: 15px;
+    border:2px solid #212121 ;
+    border-radius: 2px;
+    margin-right: 8px;
+
+}
+.form-check:checked +.form-check-text::before{
+    background-color: var(--accent-color);
+    border: none;
+    background-image: url(../images/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}*/
+
+.check-text{ 
+    color:var(--accent-color);
+    
+}
+
+       
+
+
+.checkbox-btn{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+    
+  color: #FFFFFF;
+  background: #188CE8;
+  border-radius: 4px;
+  
+}
+
+  
+
 /*.team-soc-link {
     width: 44px;
     height: 44px;
@@ -644,19 +898,27 @@ background: #FFFFFF;
     justify-content: center;
     align-items: center;
 
+    
+    
+}
+.join-soc-item:hover
+ {
+    background-color:var(--accent-color);
+}
+.join-soc-link {
     transition-property: backgroind-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
 }
-.join-soc-item:hover,
-.join-soc-item:focus {
-    background-color:var(--accent-color);
+.join-soc-link:focus
+{
+    background-color: var(--accent-color);
 }
 .join-soc-icon{
     fill:#ffffff;
     
 }
+
 
 
 
