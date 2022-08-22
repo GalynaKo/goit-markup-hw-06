@@ -460,10 +460,10 @@
                          <form class="join-action">
                             <h3 class="join-action-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
                             <label for="email"></label>
-                            <input type="email" name="E-mail"placeholder="E-mail" id="email"/>
+                            <input class="join-action-input" type="email" name="E-mail"placeholder="E-mail" id="email"/>
                          
                             <button class="join-action-btn" type="submit">Подписаться
-                               <svg class="action-icon" width="20" height="20">
+                               <svg class="action-icon-btn" width="24" height="24">
                                   <use href="./images/symbol-defs.svg#icon-aereo"></use>
                                </svg>
                             </button>
@@ -484,11 +484,16 @@
 
                   <div class="backdrop is-hidden" data-modal>
                      <div class="modal">
-                        <button type="button" class="modal-btn"data-modal-close>
-                           <svg class="modal-x" >
-                              <use href="./images/symbol-defs.svg#icon-close-x"></use>
-                           </svg>
-                        </button>
+                        
+                           <button type="button" class="modal-btn" data-modal-close>
+                              <svg class="modal-x">
+                                 <use href="./images/symbol-defs.svg#icon-close-x"></use>
+                              </svg>
+                           </button>
+                        
+                      
+                        
+                       
                         <p class="form-group-title">Оставьте свои данные, мы вам перезвоним</p>
 
                         <form class="form ">
@@ -562,7 +567,7 @@
                                     <svg class="check-icon" width="12" height="9">
                                      <use href="./images/symbol-defs.svg#icon-ok"></use>
                                    </svg>
-                                </span>Соглашаюсь с рассылкой и принимаю<a class="check-text">Условия договора</a> </label>
+                                </span>Соглашаюсь с рассылкой и принимаю &nbsp; <a class="check-text" href=""> Условия договора </a> </label>
                            
                            
                             <button class="checkbox-btn" type="submit">Отправить</button>
