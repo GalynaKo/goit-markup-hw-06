@@ -693,6 +693,7 @@ display: flex;
     display: flex;
    
     background-color: transparent;
+    cursor: pointer;
 
  margin-left: 100%;
  margin-top: 8px;
@@ -930,6 +931,7 @@ font-weight: 400;
   background: #188CE8;
   border-radius: 4px;
   border: transparent;
+cursor: pointer;
   
 }
 
