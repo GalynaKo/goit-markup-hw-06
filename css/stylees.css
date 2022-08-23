@@ -27,7 +27,20 @@ background-color: #ffffff;
     background-color:#F5F4FA;
 }
 
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 .list {
     list-style: none;
@@ -490,28 +503,41 @@ background: #FFFFFF;
 }
 .footer >.container{
     display: flex;
+    align-items: baseline;
     
 
 }
 
+.footer-logo{
+  display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.footer-address {
+    flex-grow: 1;
+}
+
+.footer-list {
+    list-style: none;
+}
 .footer-cursor{
     cursor:none;
+    margin-right: 0;
+    
 }
 .footer .logo{
     color: #FFFFFF;
     
 
-   
 }
-.footer-list{
-    margin-top: 20px;
-}
+
+
 .footer-title{
     color:var(--accent-color);
 }
- .footer-list-address{
-    margin-top: 0px;
-    margin-bottom: 9px;
+.footer-list .footer-item+.footer-item{
+    margin-top: 9px;
+ 
 }
 .footer .address{
 
@@ -523,7 +549,7 @@ background: #FFFFFF;
         
 }
 
-.footer .address-k{
+.footer-link{
     color: #FFFFFF;
     font-style: normal;
     font-weight: 400;
@@ -551,12 +577,15 @@ background: #FFFFFF;
 
     
 }
+.join-action{
+display: flex;
+    margin-top: 20px;
+}
 .join-title,
 .join-action-title
 {
     display: flex;
     
-    align-items: center;
     font-family: 'Roboto';
     
        
@@ -570,11 +599,12 @@ background: #FFFFFF;
 }
 
 .join-action input{
-    padding-top: 15px;
-    padding-bottom: 15px;
+   /* padding-top: 15px;*/
+    /*padding-bottom: 15px;*/
     padding-left: 16px;
-    margin-top: 20px;
+    
     width: 358px;
+    min-height: 50px;
     color: wheat;
     border: 1px solid rgba(255, 255, 255, 0.3);
     
@@ -587,6 +617,10 @@ background: #FFFFFF;
     
 
 .join-action-btn{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+
     background: #2196F3;
     color: #ffffff;
     border-radius: 4px;
@@ -594,9 +628,7 @@ background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     width: 200px;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     
     margin-left: 12px;
 
@@ -607,17 +639,13 @@ background: #FFFFFF;
     
     
 
-    position: relative;
+ 
    
 }
 .action-icon-btn{
     fill: #FFFFFF;
     margin-left: 10px;
 
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); 
-        
 }
 
 .backdrop {
@@ -687,7 +715,8 @@ position: relative;
 }
 
 
-.modal-x:hover {
+.modal-x:hover,
+.modal-x:focus {
   
     fill:var(--accent-color);
 }
