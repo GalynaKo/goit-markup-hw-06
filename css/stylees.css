@@ -580,6 +580,7 @@ background: #FFFFFF;
     
     border-radius: 4px;
     background: transparent;
+    justify-content: center;
 }
 
 
@@ -592,14 +593,19 @@ background: #FFFFFF;
     border: transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     width: 200px;
-    min-height: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     margin-left: 12px;
 
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    letter-spacing: 0.06em;
+    
+    
 
     position: relative;
    
@@ -609,7 +615,6 @@ background: #FFFFFF;
     margin-left: 10px;
 
     position: absolute;
-    left: 148px;
     top: 50%;
     transform: translateY(-50%); 
         
@@ -644,54 +649,49 @@ background: #FFFFFF;
     
     width: 528px;
     min-height: 581px;
-    padding: 40px;
+    padding: 0px 40px 40px 40px;
 
     background-color: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-.modal-btn{
- left: 100%;
- top: -20px;
- right:8px;
-}
 
 .modal-btn{
-position: relative;
-
-
-}
-.modal-x {
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    
-    top: 8px;
-    right: 8px;
-    bottom: 2px;
+    border-radius: 50%;align-items: center;
+    justify-content: center;
+    display: flex;
+   
+    background-color: transparent;
 
+ margin-left: 100%;
+ margin-top: 8px;
+ margin-right: 8px;
+ bottom: 2px;
+}
+.modal-btn {
+position: relative;
+ 
+}
+
+
+.modal-x {
+    position: absolute;
+
+    
     transition-property: fill;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
 }
-.modal-x:hover{
+
+
+.modal-x:hover {
   
     fill:var(--accent-color);
 }
-.modal-btn{
-    position: relative;
-    
-    background-color: transparent;
-    border: #FFFFFF;
-    
-    
-}
+
 .is-hidden{
 
     opacity: 0;
@@ -737,6 +737,7 @@ background-color: red;
         letter-spacing: 0.03em;
         margin-bottom: 12px;
     
+       /* margin-top: 40px;*/
         color: #212121;
 }
  .form-label {
@@ -749,7 +750,7 @@ background-color: red;
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 15px;
